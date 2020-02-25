@@ -44,12 +44,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ApisCerana" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1XT05oNvpDqPP86kXiV8wWMlukT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -59,9 +60,10 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_28" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-25T08:40:12.116410500Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,7 +74,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -157,12 +159,17 @@
       <workItem from="1582087079522" duration="1151000" />
       <workItem from="1582114898276" duration="18000" />
       <workItem from="1582519976872" duration="38000" />
-      <workItem from="1582618544269" duration="2438000" />
+      <workItem from="1582618544269" duration="2657000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ApisCerana" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="485" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1581659162025">
@@ -181,10 +188,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="538" y="178" key="AndroidCreateXmlResourceDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581408268197" />
-    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1582619917663">
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1582621201361">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="119" key="FileChooserDialogImpl/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582619917663" />
+    <state x="460" y="119" key="FileChooserDialogImpl/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582621201361" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom" timestamp="1582618840933">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -205,10 +212,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="260" y="108" key="IDE.errors.dialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582621001795" />
-    <state x="181" y="0" key="SettingsEditor" timestamp="1581064238408">
+    <state x="181" y="0" key="SettingsEditor" timestamp="1582621215813">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="181" y="0" key="SettingsEditor/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1581064238408" />
+    <state x="181" y="0" key="SettingsEditor/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582621215813" />
     <state x="92" y="92" width="1176" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1582619846623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
