@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">Apis Cerana</string>
+
+  <string name="code_425">Data Broken on send</string>
+  <string name="code_500">Response not found</string>
+
+  <string name="logo">Logo</string>
+  <string name="username">username</string>
+  <string name="password">password</string>
+  <string name="login">Login</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="icon">Icon</string>
+</resources>
