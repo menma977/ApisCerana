@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".LoginActivity">
 
   <LinearLayout
@@ -26,47 +27,41 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+        android:layout_height="10dp"/>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
         android:layout_width="match_parent"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_height="wrap_content">
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textSecondary"
+        android:textColorHint="@color/textSecondary"
+        android:backgroundTint="@color/colorAccent"
+        android:hint="@string/username"
+        android:ems="10"
+        android:id="@+id/usernameEditText"
+        android:autofillHints="@string/username"
+        tools:targetApi="o"/>
 
-      <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPersonName"
-          android:hint="@string/username"
-          android:ems="10"
-          android:id="@+id/usernameEditText"
-          android:autofillHints="@string/username"
-          tools:targetApi="o"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
         android:layout_width="match_parent"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_height="wrap_content">
-
-      <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPassword"
-          android:hint="@string/password"
-          android:ems="10"
-          android:id="@+id/passwordEditText"
-          android:autofillHints="@string/password"
-          tools:targetApi="o"/>
-
-    </LinearLayout>
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textSecondary"
+        android:textColorHint="@color/textSecondary"
+        android:backgroundTint="@color/colorAccent"
+        android:hint="@string/password"
+        android:ems="10"
+        android:id="@+id/passwordEditText"
+        android:autofillHints="@string/password"
+        tools:targetApi="o"/>
 
     <Space
         android:layout_width="match_parent"

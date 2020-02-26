@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_home"
+    android:background="@color/colorPrimary"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -13,8 +13,6 @@
       android:layout_width="100dp"
       android:layout_height="100dp"
       android:indeterminate="true"
-      android:indeterminateTint="@color/colorSecondary"
-      tools:targetApi="lollipop"
-      android:background="@mipmap/ic_launcher_round"/>
+      tools:targetApi="lollipop"/>
 
 </LinearLayout>

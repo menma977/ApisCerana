@@ -51,6 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="94" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -63,7 +64,8 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="fff8fe" />
-                                      <entry key="foregroundImage" value="D:\Git\ApisMelli\public\dist\img\ApisMelli.png" />
+                                      <entry key="foregroundImage" value="D:\loadingBee.png" />
+                                      <entry key="outputName" value="ic_launcher_loading" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -136,7 +138,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_perm_identity_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_archive_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -146,7 +148,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_perm_identity" />
+                            <entry key="outputName" value="ic_archive" />
                             <entry key="sourceFile" value="C:\Users\ecs" />
                           </map>
                         </option>

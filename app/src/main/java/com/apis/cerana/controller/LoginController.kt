@@ -4,7 +4,9 @@ import android.os.AsyncTask
 import com.apis.cerana.R
 import com.apis.cerana.config.Converter
 import com.apis.cerana.model.Url
-import com.squareup.okhttp.*
+import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -13,23 +15,23 @@ class LoginController(private var body: HashMap<String, String>) : AsyncTask<Voi
   override fun doInBackground(vararg params: Void?): JSONObject {
     return try {
       val client = OkHttpClient()
-      val mediaType: MediaType = MediaType.parse("application/x-www-form-urlencoded")
-      val sendBody = RequestBody.create(mediaType, Converter().map(body))
+      val mediaType: MediaType = "application/x-www-form-urlencoded".toMediaType()
+      val sendBody = Converter().map(body).toRequestBody(mediaType)
       val request: Request = Request.Builder()
         .url("${Url.get()}/login")
-        .method("POST", sendBody)
+        .post(sendBody)
         .addHeader("X-Requested-With", "XMLHttpRequest")
         .build()
       val response: Response = client.newCall(request).execute()
-      val input = BufferedReader(InputStreamReader(response.body().byteStream()))
+      val input = BufferedReader(InputStreamReader(response.body?.byteStream()))
 
       val inputData: String = input.readLine()
       val convertJSON = JSONObject(inputData)
       input.close()
       return if (response.isSuccessful) {
-        JSONObject().put("code", response.code()).put("response", convertJSON["response"])
+        JSONObject().put("code", response.code).put("response", convertJSON["response"])
       } else {
-        JSONObject().put("code", response.code()).put(
+        JSONObject().put("code", response.code).put(
           "response", convertJSON
             .getJSONObject("errors")
             .getJSONArray(

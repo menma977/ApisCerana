@@ -4,7 +4,7 @@
   <color name="colorPrimaryLight">#2b2e4a</color>
   <color name="colorPrimaryDark">#000000</color>
 
-  <color name="colorSecondary">#b47335</color>
+  <color name="colorSecondary">#B47335</color>
   <color name="colorSecondaryLight">#EAA261</color>
   <color name="colorSecondaryDark">#804706</color>
 
@@ -26,6 +26,8 @@
   <color name="WarningClick">#976C2F</color>
   <color name="Danger">#D7524F</color>
   <color name="DangerClick">#83302E</color>
+
+  <color name="orange">#e98c00</color>
 
   <color name="Dark">#4A5E71</color>
   <color name="Link">#00FDFDFE</color>

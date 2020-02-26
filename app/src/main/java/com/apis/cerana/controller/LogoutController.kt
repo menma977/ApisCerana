@@ -3,9 +3,9 @@ package com.apis.cerana.controller
 import android.os.AsyncTask
 import com.apis.cerana.R
 import com.apis.cerana.model.Url
-import com.squareup.okhttp.OkHttpClient
-import com.squareup.okhttp.Request
-import com.squareup.okhttp.Response
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -24,15 +24,15 @@ class LogoutController(private var token: String) : AsyncTask<Void, Void, JSONOb
         ).build()
       val response: Response = client.newCall(request).execute()
       val input =
-        BufferedReader(InputStreamReader(response.body().byteStream()))
+        BufferedReader(InputStreamReader(response.body?.byteStream()))
 
       val inputData: String = input.readLine()
       val convertJSON = JSONObject(inputData)
       input.close()
       return if (response.isSuccessful) {
-        JSONObject().put("code", response.code()).put("response", convertJSON["response"])
+        JSONObject().put("code", response.code).put("response", convertJSON["response"])
       } else {
-        JSONObject().put("code", response.code()).put("response", R.string.code_425)
+        JSONObject().put("code", response.code).put("response", R.string.code_425)
       }
     } catch (e: Exception) {
       e.printStackTrace()

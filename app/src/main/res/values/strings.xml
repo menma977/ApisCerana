@@ -9,7 +9,18 @@
   <string name="password">password</string>
   <string name="login">Login</string>
 
-  <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="icon">Icon</string>
+  <string name="profile">Profile</string>
+  <string name="ktp">KTP</string>
+  <string name="name">Name</string>
+  <string name="email">Email</string>
+  <string name="address">Address</string>
+  <string name="bank">BANK</string>
+  <string name="bank_account_number">Bank account number</string>
+  <string name="phone_number">Phone number</string>
+  <string name="balance">Balance</string>
+  <string name="qr">QR</string>
+  <string name="withdraw">Withdraw</string>
+  <string name="request_stup">Request Stup</string>
+  <string name="add_user">Add User</string>
 </resources>
