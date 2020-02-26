@@ -6,7 +6,17 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c256c556-a19d-4559-9938-3286fd33757d" name="Default Changelist" comment="" />
+    <list default="true" id="c256c556-a19d-4559-9938-3286fd33757d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +169,9 @@
       <workItem from="1582087079522" duration="1151000" />
       <workItem from="1582114898276" duration="18000" />
       <workItem from="1582519976872" duration="38000" />
-      <workItem from="1582618544269" duration="2657000" />
+      <workItem from="1582618544269" duration="3306000" />
+      <workItem from="1582625913011" duration="96000" />
+      <workItem from="1582692871744" duration="2493000" />
     </task>
     <servers />
   </component>
@@ -208,10 +220,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state width="1317" height="179" key="GridCell.Tab.0.right/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582618840933" />
-    <state x="260" y="108" key="IDE.errors.dialog" timestamp="1582621001795">
+    <state x="260" y="108" key="IDE.errors.dialog" timestamp="1582695299778">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="260" y="108" key="IDE.errors.dialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582621001795" />
+    <state x="260" y="108" key="IDE.errors.dialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582695299778" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1582621215813">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -220,10 +232,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="92" y="92" width="1176" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582619846623" />
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1582114906731">
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1582692871563">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582114906731" />
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582692871563" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581410120993">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
