@@ -1,0 +1,75 @@
+package com.apis.cerana.controller
+
+import android.os.AsyncTask
+import com.apis.cerana.R
+import com.apis.cerana.model.Url
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+class UserController {
+  class Get(private val token: String) : AsyncTask<Void, Void, JSONObject>() {
+    override fun doInBackground(vararg params: Void?): JSONObject {
+      try {
+        val client = OkHttpClient()
+        val request: Request = Request.Builder()
+          .url("${Url.get()}/user/show")
+          .get()
+          .addHeader("X-Requested-With", "XMLHttpRequest")
+          .addHeader(
+            "Authorization",
+            "Bearer $token"
+          ).build()
+        val response: Response = client.newCall(request).execute()
+        val input =
+          BufferedReader(InputStreamReader(response.body?.byteStream()))
+
+        val inputData: String = input.readLine()
+        val convertJSON = JSONObject(inputData)
+        input.close()
+        return if (response.isSuccessful) {
+          JSONObject().put("code", response.code).put("response", convertJSON["response"])
+        } else {
+          JSONObject().put("code", response.code).put("response", R.string.code_425)
+        }
+      } catch (e: Exception) {
+        e.printStackTrace()
+        return JSONObject().put("code", 500).put("response", R.string.code_500)
+      }
+    }
+  }
+
+  class Balance(private val token: String) : AsyncTask<Void, Void, JSONObject>() {
+    override fun doInBackground(vararg params: Void?): JSONObject {
+      try {
+        val client = OkHttpClient()
+        val request: Request = Request.Builder()
+          .url("${Url.get()}/user/balance")
+          .method("GET", null)
+          .addHeader("X-Requested-With", "XMLHttpRequest")
+          .addHeader(
+            "Authorization",
+            "Bearer $token"
+          ).build()
+        val response: Response = client.newCall(request).execute()
+        val input =
+          BufferedReader(InputStreamReader(response.body?.byteStream()))
+
+        val inputData: String = input.readLine()
+        val convertJSON = JSONObject(inputData)
+        input.close()
+        return if (response.isSuccessful) {
+          JSONObject().put("code", response.code).put("response", convertJSON["balance"])
+        } else {
+          JSONObject().put("code", response.code).put("response", R.string.code_425)
+        }
+      } catch (e: Exception) {
+        e.printStackTrace()
+        return JSONObject().put("code", 500).put("response", R.string.code_500)
+      }
+    }
+  }
+}

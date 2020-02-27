@@ -21,7 +21,6 @@
         android:layout_height="220dp">
 
       <TextView
-          android:text="@string/username"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textAlignment="center"
@@ -70,7 +69,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/ktp"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -104,7 +102,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/name"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -138,7 +135,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/email"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -172,7 +168,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/address"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -196,6 +191,39 @@
         android:layout_height="wrap_content">
 
       <TextView
+          android:text="@string/phone_number"
+          android:layout_marginTop="5dp"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:textStyle="bold"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/colorAccent"/>
+
+      <TextView
+          android:layout_marginStart="25dp"
+          android:layout_marginEnd="25dp"
+          android:layout_marginBottom="5dp"
+          android:textSize="17sp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/colorAccent"
+          android:id="@+id/phoneTextView"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/card_primary"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content">
+
+      <TextView
           android:text="@string/bank"
           android:layout_marginTop="5dp"
           android:layout_marginStart="20dp"
@@ -206,7 +234,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/bank"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -230,7 +257,7 @@
         android:layout_height="wrap_content">
 
       <TextView
-          android:text="@string/bank_account_number"
+          android:text="@string/pin_bank"
           android:layout_marginTop="5dp"
           android:layout_marginStart="20dp"
           android:layout_marginEnd="20dp"
@@ -240,7 +267,6 @@
           android:textColor="@color/colorAccent"/>
 
       <TextView
-          android:text="@string/bank_account_number"
           android:layout_marginStart="25dp"
           android:layout_marginEnd="25dp"
           android:layout_marginBottom="5dp"
@@ -248,47 +274,13 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/colorAccent"
-          android:id="@+id/idBankTextView"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="@drawable/card_primary"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:elevation="50dp"
-        android:layout_height="wrap_content">
-
-      <TextView
-          android:text="@string/phone_number"
-          android:layout_marginTop="5dp"
-          android:layout_marginStart="20dp"
-          android:layout_marginEnd="20dp"
-          android:textStyle="bold"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:textColor="@color/colorAccent"/>
-
-      <TextView
-          android:text="@string/phone_number"
-          android:layout_marginStart="25dp"
-          android:layout_marginEnd="25dp"
-          android:layout_marginBottom="5dp"
-          android:textSize="17sp"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:textColor="@color/colorAccent"
-          android:id="@+id/phoneTextView"/>
+          android:id="@+id/pinBankTextView"/>
 
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="150dp"/>
 
   </LinearLayout>
 

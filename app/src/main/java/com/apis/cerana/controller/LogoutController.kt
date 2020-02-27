@@ -16,7 +16,7 @@ class LogoutController(private var token: String) : AsyncTask<Void, Void, JSONOb
       val client = OkHttpClient()
       val request: Request = Request.Builder()
         .url("${Url.get()}/logout")
-        .method("GET", null)
+        .get()
         .addHeader("X-Requested-With", "XMLHttpRequest")
         .addHeader(
           "Authorization",
