@@ -14,7 +14,6 @@ class AuthController(private var token: String) : AsyncTask<Void, Void, JSONObje
       val client = OkHttpClient()
       val request: Request = Request.Builder()
         .url("${Url.get()}/verification")
-        .get()
         .addHeader("X-Requested-With", "XMLHttpRequest")
         .addHeader(
           "Authorization",

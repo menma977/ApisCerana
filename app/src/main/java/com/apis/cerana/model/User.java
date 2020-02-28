@@ -19,7 +19,6 @@ public class User {
       setImg((String) auth.get("image"));
       setStatus((Integer) auth.get("status"));
     } catch (Exception e) {
-      e.printStackTrace();
       setToken("");
       setUsername("");
       setImg("");

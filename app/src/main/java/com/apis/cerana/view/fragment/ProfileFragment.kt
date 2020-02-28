@@ -3,12 +3,11 @@ package com.apis.cerana.view.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.apis.cerana.MainActivity
 import com.apis.cerana.R
 import com.apis.cerana.config.FragmentLoading
@@ -69,10 +68,10 @@ class ProfileFragment : Fragment() {
   }
 
   private fun getUser(token: String) {
-    Timer().schedule(1000) {
-      val getUser = UserController.Get(token).execute().get()
-      if (getUser["code"] == 200) {
-        if (getUser.getJSONObject("response")["status"] == 0) {
+    Timer().schedule(100) {
+      val response = UserController.Get(token).execute().get()
+      if (response["code"] == 200) {
+        if (response.getJSONObject("response")["status"] == 0) {
           LogoutController(token).execute().get()
           activity?.runOnUiThread {
             val goTo = Intent(context, MainActivity::class.java)
@@ -81,48 +80,42 @@ class ProfileFragment : Fragment() {
             startActivity(goTo)
           }
         }
-        val province = getUser.getJSONObject("response")["province"].toString()
-        val district = getUser.getJSONObject("response")["district"].toString()
-        val subDistrict = getUser.getJSONObject("response")["sub_district"].toString()
-        val village = getUser.getJSONObject("response")["village"].toString()
-        val descriptionAddress = getUser.getJSONObject("response")["description_address"].toString()
-        val numberAddress = getUser.getJSONObject("response")["number_address"].toString()
+        val province = response.getJSONObject("response")["province"].toString()
+        val district = response.getJSONObject("response")["district"].toString()
+        val subDistrict = response.getJSONObject("response")["sub_district"].toString()
+        val village = response.getJSONObject("response")["village"].toString()
+        val descriptionAddress = response.getJSONObject("response")["description_address"].toString()
+        val numberAddress = response.getJSONObject("response")["number_address"].toString()
         val formatAddress = "$descriptionAddress, $numberAddress $village $subDistrict $district $province"
         activity?.runOnUiThread {
-          changeProfileImage(getUser.getJSONObject("response")["image"].toString())
-          username.text = getUser.getJSONObject("response")["username"].toString()
-          if (getUser.getJSONObject("response")["username"].toString().isNotEmpty()) {
-            ktp.text = getUser.getJSONObject("response")["id_identity_card"].toString()
+          changeProfileImage(response.getJSONObject("response")["image"].toString())
+          username.text = response.getJSONObject("response")["username"].toString()
+          if (response.getJSONObject("response")["username"].toString().isNotEmpty()) {
+            ktp.text = response.getJSONObject("response")["id_identity_card"].toString()
           } else {
-            ktp.text = getUser.getJSONObject("response")["id_identity_card"].toString().plus("Anda belum upload KTP")
+            ktp.text = response.getJSONObject("response")["id_identity_card"].toString().plus("Anda belum upload KTP")
           }
-          name.text = getUser.getJSONObject("response")["name"].toString()
-          email.text = getUser.getJSONObject("response")["email"].toString()
+          name.text = response.getJSONObject("response")["name"].toString()
+          email.text = response.getJSONObject("response")["email"].toString()
           address.text = formatAddress
-          phone.text = getUser.getJSONObject("response")["phone"].toString()
-          bank.text = getUser.getJSONObject("response")["bank"].toString()
-          pinBank.text = getUser.getJSONObject("response")["pin_bank"].toString()
+          phone.text = response.getJSONObject("response")["phone"].toString()
+          bank.text = response.getJSONObject("response")["bank"].toString()
+          pinBank.text = response.getJSONObject("response")["pin_bank"].toString()
           val json = JSONObject()
           json.put("token", token)
-          json.put("username", getUser.getJSONObject("response")["username"].toString())
-          json.put("image", getUser.getJSONObject("response")["image"].toString())
-          json.put("status", getUser.getJSONObject("response")["status"].toString().toInt())
-          User(context).set(json.toString())
+          json.put("username", response.getJSONObject("response")["username"].toString())
+          json.put("image", response.getJSONObject("response")["image"].toString())
+          json.put("status", response.getJSONObject("response")["status"].toString().toInt())
+          user.set(json.toString())
           loadingFragment.closeDialog()
         }
       } else {
-        try {
-          activity?.runOnUiThread {
-            Toast.makeText(context, activity!!.getString(R.string.code_425), Toast.LENGTH_LONG).show()
-            loadingFragment.closeDialog()
-          }
-        } catch (e: Exception) {
-          activity?.runOnUiThread {
-            val goTo = Intent(activity?.applicationContext, MainActivity::class.java)
-            activity?.finish()
-            loadingFragment.closeDialog()
-            startActivity(goTo)
-          }
+        activity?.runOnUiThread {
+          val goTo = Intent(activity?.applicationContext, MainActivity::class.java)
+          user.clear()
+          activity?.finish()
+          loadingFragment.closeDialog()
+          startActivity(goTo)
         }
       }
     }

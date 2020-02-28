@@ -138,7 +138,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_archive_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202019.3.1/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_recent_actors_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -148,7 +148,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_archive" />
+                            <entry key="outputName" value="ic_recent_actors" />
                             <entry key="sourceFile" value="C:\Users\ecs" />
                           </map>
                         </option>

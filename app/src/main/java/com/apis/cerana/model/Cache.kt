@@ -21,7 +21,7 @@ class Cache(private var context: Context) {
   }
 
   fun get(): JSONObject {
-    return JSONObject(sharedPreferences.getString("json", "[]"))
+    return JSONObject(sharedPreferences.getString("json", "{'token': '', 'username': '', 'image': '', 'status': ''}"))
   }
 
   fun remove() {

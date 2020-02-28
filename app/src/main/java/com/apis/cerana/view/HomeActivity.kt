@@ -40,9 +40,9 @@ class HomeActivity : AppCompatActivity() {
 
     logout.setOnClickListener {
       loading.openDialog()
-      Timer().schedule(1000) {
-        val logoutResponse = LogoutController(User(applicationContext).token).execute().get()
-        if (logoutResponse["code"] == 200) {
+      Timer().schedule(100) {
+        val response = LogoutController(User(applicationContext).token).execute().get()
+        if (response["code"] == 200) {
           runOnUiThread {
             goTo = Intent(applicationContext, MainActivity::class.java)
             User(applicationContext).clear()
@@ -55,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
             Toast.makeText(
               applicationContext,
               applicationContext.getString(
-                logoutResponse["response"]
+                response["response"]
                   .toString()
                   .toInt()
               ),

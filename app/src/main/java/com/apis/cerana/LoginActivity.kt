@@ -40,15 +40,15 @@ class LoginActivity : AppCompatActivity() {
 
     login.setOnClickListener {
       loading.openDialog()
-      Timer().schedule(1000) {
+      Timer().schedule(100) {
         val body = HashMap<String, String>()
         body["username"] = username.text.toString()
         body["password"] = password.text.toString()
-        val loginResponse = LoginController(body).execute().get()
+        val response = LoginController(body).execute().get()
         runOnUiThread {
-          if (loginResponse["code"] == 200) {
+          if (response["code"] == 200) {
             val json = JSONObject()
-            json.put("token", loginResponse["response"].toString())
+            json.put("token", response["response"].toString())
             json.put("username", "")
             json.put("image", "")
             json.put("status", 0)
@@ -59,7 +59,15 @@ class LoginActivity : AppCompatActivity() {
             startActivity(goTo)
           } else {
             loading.closeDialog()
-            Toast.makeText(applicationContext, loginResponse["response"].toString(), Toast.LENGTH_SHORT).show()
+            try {
+              Toast.makeText(
+                applicationContext,
+                getString(response["response"].toString().toInt()),
+                Toast.LENGTH_SHORT
+              ).show()
+            } catch (e: Exception) {
+              Toast.makeText(applicationContext, response["response"].toString(), Toast.LENGTH_SHORT).show()
+            }
           }
         }
       }

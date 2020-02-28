@@ -1,8 +1,10 @@
 <resources>
   <string name="app_name">Apis Cerana</string>
 
-  <string name="code_425">Data Broken on send</string>
-  <string name="code_500">Response not found</string>
+  <string name="code_425">Data Broken on send/Your session is end</string>
+  <string name="code_500">Response not found/Your session is end</string>
+
+  <string name="withdraw_limit">Your withdrawal is still handled by the Admin</string>
 
   <string name="logo">Logo</string>
   <string name="username">username</string>
@@ -27,4 +29,11 @@
   <string name="receipt_date">Receipt Date</string>
   <string name="date_of_retrieval">Date of Retrieval</string>
   <string name="home">Home</string>
+  <string name="default_balance">0</string>
+  <string name="rp">Rp</string>
+  <string name="submit">Submit</string>
+  <string name="total_stup">Total Stup</string>
+  <string name="transferred_to">Transferred to</string>
+  <string name="edit_profile">Edit Profile</string>
+  <string name="upload_ktp">Upload KTP</string>
 </resources>

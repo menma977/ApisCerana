@@ -178,7 +178,7 @@
           android:layout_height="wrap_content"
           app:layout_columnWeight="1"
           app:layout_rowWeight="1"
-          app:layout_column="1"
+          app:layout_column="0"
           app:layout_row="1">
 
         <ImageButton
@@ -197,6 +197,76 @@
 
         <TextView
             android:text="@string/add_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textSecondary"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:gravity="center"
+          android:orientation="vertical"
+          android:layout_margin="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_columnWeight="1"
+          app:layout_rowWeight="1"
+          app:layout_column="1"
+          app:layout_row="1">
+
+        <ImageButton
+            android:padding="15dp"
+            android:src="@drawable/ic_person"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="@drawable/button_default"
+            android:contentDescription="@string/icon"
+            android:tint="@color/textSecondary"
+            android:scaleType="fitXY"
+            android:elevation="5dp"
+            android:id="@+id/editProfileButton"/>
+
+        <TextView
+            android:text="@string/edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textSecondary"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:gravity="center"
+          android:orientation="vertical"
+          android:layout_margin="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_columnWeight="1"
+          app:layout_rowWeight="1"
+          app:layout_column="2"
+          app:layout_row="1">
+
+        <ImageButton
+            android:padding="15dp"
+            android:src="@drawable/ic_recent_actors"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="@drawable/button_default"
+            android:contentDescription="@string/icon"
+            android:tint="@color/textSecondary"
+            android:scaleType="fitXY"
+            android:elevation="5dp"
+            android:id="@+id/uploadKTPButton"/>
+
+        <TextView
+            android:text="@string/upload_ktp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/textSecondary"

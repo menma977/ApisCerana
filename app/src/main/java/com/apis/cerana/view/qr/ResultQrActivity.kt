@@ -31,7 +31,7 @@ class ResultQrActivity : AppCompatActivity() {
     loading.openDialog()
     user = User(this)
     val qrResponse = intent.getSerializableExtra("qr").toString()
-    Timer().schedule(1000) {
+    Timer().schedule(100) {
       val body = HashMap<String, String>()
       body["qr"] = qrResponse
       val responseBee = BeeController.Get(user.token, body).execute().get()

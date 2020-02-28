@@ -15,34 +15,48 @@
       android:theme="@style/AppTheme"
       tools:ignore="AllowBackup">
     <activity
-        android:screenOrientation="portrait"
+        android:label="@string/withdraw"
+        android:name=".view.WithdrawActivity">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.HomeActivity"/>
+    </activity>
+    <activity
+        android:label="@string/request_stup"
+        android:name=".view.RequestStupActivity">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.HomeActivity"/>
+    </activity>
+    <activity
+        android:name=".view.qr.ResultQrActivity"
         android:label="Result QR"
-        android:name=".view.qr.ResultQrActivity">
+        android:screenOrientation="portrait">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
           android:value=".view.HomeActivity"/>
     </activity>
     <activity
-        android:screenOrientation="portrait"
         android:name=".view.qr.QrActivity"
-        android:label="@string/qr">
+        android:label="@string/qr"
+        android:screenOrientation="portrait">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
           android:value=".view.HomeActivity"/>
     </activity>
     <activity
-        android:screenOrientation="portrait"
         android:name=".view.HomeActivity"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme.NoActionBar">
     </activity>
     <activity
-        android:screenOrientation="portrait"
         android:name=".LoginActivity"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme.NoActionBar">
     </activity>
     <activity
-        android:screenOrientation="portrait"
         android:name=".MainActivity"
+        android:screenOrientation="portrait"
         android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

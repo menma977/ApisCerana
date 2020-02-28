@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    Timer().schedule(1000) {
+    Timer().schedule(100) {
       if (User(applicationContext).token.isEmpty()) {
         goto = Intent(applicationContext, LoginActivity::class.java)
         finishAndRemoveTask()
         startActivity(goto)
       } else {
-        val authResponse = AuthController(User(applicationContext).token).execute().get()
-        if (authResponse["code"] == 200) {
+        val response = AuthController(User(applicationContext).token).execute().get()
+        if (response["code"] == 200) {
           goto = Intent(applicationContext, HomeActivity::class.java)
           finishAndRemoveTask()
           startActivity(goto)

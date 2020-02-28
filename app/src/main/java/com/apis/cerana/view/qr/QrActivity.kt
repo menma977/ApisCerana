@@ -36,8 +36,6 @@ class QrActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
   override fun handleResult(rawResult: Result?) {
     if (rawResult != null) {
       loading.openDialog()
-      println(rawResult.text)
-      println(rawResult.barcodeFormat.toString())
       goTo = Intent(applicationContext, ResultQrActivity::class.java)
       goTo.putExtra("qr", rawResult.text)
       finishAndRemoveTask()

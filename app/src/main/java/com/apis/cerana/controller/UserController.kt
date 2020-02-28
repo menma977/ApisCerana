@@ -17,12 +17,9 @@ class UserController {
         val client = OkHttpClient()
         val request: Request = Request.Builder()
           .url("${Url.get()}/user/show")
-          .get()
           .addHeader("X-Requested-With", "XMLHttpRequest")
-          .addHeader(
-            "Authorization",
-            "Bearer $token"
-          ).build()
+          .addHeader("Authorization", "Bearer $token")
+          .build()
         val response: Response = client.newCall(request).execute()
         val input =
           BufferedReader(InputStreamReader(response.body?.byteStream()))
@@ -48,12 +45,9 @@ class UserController {
         val client = OkHttpClient()
         val request: Request = Request.Builder()
           .url("${Url.get()}/user/balance")
-          .method("GET", null)
           .addHeader("X-Requested-With", "XMLHttpRequest")
-          .addHeader(
-            "Authorization",
-            "Bearer $token"
-          ).build()
+          .addHeader("Authorization", "Bearer $token")
+          .build()
         val response: Response = client.newCall(request).execute()
         val input =
           BufferedReader(InputStreamReader(response.body?.byteStream()))
@@ -62,7 +56,12 @@ class UserController {
         val convertJSON = JSONObject(inputData)
         input.close()
         return if (response.isSuccessful) {
-          JSONObject().put("code", response.code).put("response", convertJSON["balance"])
+          JSONObject()
+            .put("code", response.code)
+            .put("response", convertJSON["balance"])
+            .put("admin", convertJSON["admin"])
+            .put("data", convertJSON["data"])
+            .put("nominal", convertJSON["nominal"])
         } else {
           JSONObject().put("code", response.code).put("response", R.string.code_425)
         }
