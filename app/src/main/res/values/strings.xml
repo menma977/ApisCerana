@@ -11,7 +11,6 @@
   <string name="password">password</string>
   <string name="login">Login</string>
 
-  <string name="icon">Icon</string>
   <string name="profile">Profile</string>
   <string name="ktp">KTP</string>
   <string name="name">Name</string>
@@ -20,6 +19,15 @@
   <string name="bank">BANK</string>
   <string name="pin_bank">PIN Bank</string>
   <string name="phone_number">Phone number</string>
+  <string name="validation_password">Confirm Password</string>
+  <string name="province">Province</string>
+  <string name="district">County town</string>
+  <string name="sub_district">Kelurahan</string>
+  <string name="village">Village</string>
+  <string name="number_address">House Number</string>
+  <string name="description_address">RT / RW. House Address Information</string>
+
+  <string name="icon">Icon</string>
   <string name="balance">Balance</string>
   <string name="qr">QR</string>
   <string name="withdraw">Withdraw</string>
@@ -36,4 +44,7 @@
   <string name="transferred_to">Transferred to</string>
   <string name="edit_profile">Edit Profile</string>
   <string name="upload_ktp">Upload KTP</string>
+  <string name="image_ktp">Image KTP</string>
+  <string name="photo_holding_ktp_id">photo holding KTP ID</string>
+  <string name="after_uploading_the_image_wait_for_the_admin_to_confirm_the_data_you_sent">After uploading the image, wait for the admin to confirm the data you sent</string>
 </resources>

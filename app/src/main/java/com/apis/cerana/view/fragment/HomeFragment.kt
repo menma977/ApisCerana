@@ -14,6 +14,8 @@ import com.apis.cerana.R
 import com.apis.cerana.config.FragmentLoading
 import com.apis.cerana.controller.UserController
 import com.apis.cerana.model.User
+import com.apis.cerana.view.EditProfileActivity
+import com.apis.cerana.view.ImageActivity
 import com.apis.cerana.view.RequestStupActivity
 import com.apis.cerana.view.WithdrawActivity
 import com.apis.cerana.view.qr.QrActivity
@@ -31,6 +33,8 @@ class HomeFragment : Fragment() {
   private lateinit var requestStup: ImageButton
   private lateinit var withdraw: ImageButton
   private lateinit var addUser: ImageButton
+  private lateinit var editProfile: ImageButton
+  private lateinit var uploadKTP: ImageButton
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +50,8 @@ class HomeFragment : Fragment() {
     requestStup = view.findViewById(R.id.reqeustStupButton)
     withdraw = view.findViewById(R.id.withdrawButton)
     addUser = view.findViewById(R.id.addUserButton)
+    editProfile = view.findViewById(R.id.editProfileButton)
+    uploadKTP = view.findViewById(R.id.uploadKTPButton)
 
     getBalance()
 
@@ -60,6 +66,18 @@ class HomeFragment : Fragment() {
     withdraw.setOnClickListener {
       goTo = Intent(context, WithdrawActivity::class.java)
       startActivity(goTo)
+    }
+    editProfile.setOnClickListener {
+      goTo = Intent(context, EditProfileActivity::class.java)
+      startActivity(goTo)
+    }
+    uploadKTP.setOnClickListener {
+      if (user.status == 2) {
+        Toast.makeText(this.context, "Upload KTP anda sudah di konfirmasi oleh admin", Toast.LENGTH_SHORT).show()
+      } else {
+        goTo = Intent(context, ImageActivity::class.java)
+        startActivity(goTo)
+      }
     }
     return view
   }

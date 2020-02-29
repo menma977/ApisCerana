@@ -79,10 +79,24 @@ class LoginActivity : AppCompatActivity() {
       ContextCompat.checkSelfPermission(
         this,
         Manifest.permission.CAMERA
+      ) != PackageManager.PERMISSION_GRANTED ||
+      ContextCompat.checkSelfPermission(
+        this,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE
+      ) != PackageManager.PERMISSION_GRANTED ||
+      ContextCompat.checkSelfPermission(
+        this,
+        Manifest.permission.READ_EXTERNAL_STORAGE
       ) != PackageManager.PERMISSION_GRANTED
     ) {
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        requestPermissions(arrayOf(Manifest.permission.CAMERA), 100)
+        requestPermissions(
+          arrayOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE
+          ), 100
+        )
       }
     }
   }

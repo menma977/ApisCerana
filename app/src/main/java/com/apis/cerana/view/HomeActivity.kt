@@ -47,6 +47,7 @@ class HomeActivity : AppCompatActivity() {
             goTo = Intent(applicationContext, MainActivity::class.java)
             User(applicationContext).clear()
             loading.closeDialog()
+            finishAndRemoveTask()
             startActivity(goTo)
           }
         } else {

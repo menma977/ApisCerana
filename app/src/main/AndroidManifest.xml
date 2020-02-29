@@ -5,6 +5,8 @@
 
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
   <application
       android:allowBackup="true"
@@ -14,16 +16,25 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme"
       tools:ignore="AllowBackup">
+    <activity android:name=".view.EditProfileActivity">
+    </activity>
     <activity
-        android:label="@string/withdraw"
-        android:name=".view.WithdrawActivity">
+        android:name=".view.ImageActivity"
+        android:label="@string/upload_ktp">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
           android:value=".view.HomeActivity"/>
     </activity>
     <activity
-        android:label="@string/request_stup"
-        android:name=".view.RequestStupActivity">
+        android:name=".view.WithdrawActivity"
+        android:label="@string/withdraw">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.HomeActivity"/>
+    </activity>
+    <activity
+        android:name=".view.RequestStupActivity"
+        android:label="@string/request_stup">
       <meta-data
           android:name="android.support.PARENT_ACTIVITY"
           android:value=".view.HomeActivity"/>
