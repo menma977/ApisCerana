@@ -14,10 +14,7 @@ import com.apis.cerana.R
 import com.apis.cerana.config.FragmentLoading
 import com.apis.cerana.controller.UserController
 import com.apis.cerana.model.User
-import com.apis.cerana.view.EditProfileActivity
-import com.apis.cerana.view.ImageActivity
-import com.apis.cerana.view.RequestStupActivity
-import com.apis.cerana.view.WithdrawActivity
+import com.apis.cerana.view.*
 import com.apis.cerana.view.qr.QrActivity
 import java.util.*
 import kotlin.concurrent.schedule
@@ -59,18 +56,27 @@ class HomeFragment : Fragment() {
       goTo = Intent(context, QrActivity::class.java)
       startActivity(goTo)
     }
+
     requestStup.setOnClickListener {
       goTo = Intent(context, RequestStupActivity::class.java)
       startActivity(goTo)
     }
+
     withdraw.setOnClickListener {
       goTo = Intent(context, WithdrawActivity::class.java)
       startActivity(goTo)
     }
+
+    addUser.setOnClickListener {
+      goTo = Intent(context, RegisterActivity::class.java)
+      startActivity(goTo)
+    }
+
     editProfile.setOnClickListener {
       goTo = Intent(context, EditProfileActivity::class.java)
       startActivity(goTo)
     }
+
     uploadKTP.setOnClickListener {
       if (user.status == 2) {
         Toast.makeText(this.context, "Upload KTP anda sudah di konfirmasi oleh admin", Toast.LENGTH_SHORT).show()
@@ -79,6 +85,7 @@ class HomeFragment : Fragment() {
         startActivity(goTo)
       }
     }
+
     return view
   }
 

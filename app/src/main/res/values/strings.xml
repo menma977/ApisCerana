@@ -26,6 +26,7 @@
   <string name="village">Village</string>
   <string name="number_address">House Number</string>
   <string name="description_address">RT / RW. House Address Information</string>
+  <string name="alert_massage">Data yang di inputkan harus sesuai KTP</string>
 
   <string name="icon">Icon</string>
   <string name="balance">Balance</string>
@@ -47,4 +48,5 @@
   <string name="image_ktp">Image KTP</string>
   <string name="photo_holding_ktp_id">photo holding KTP ID</string>
   <string name="after_uploading_the_image_wait_for_the_admin_to_confirm_the_data_you_sent">After uploading the image, wait for the admin to confirm the data you sent</string>
+  <string name="number_ktp">Number KTP</string>
 </resources>
