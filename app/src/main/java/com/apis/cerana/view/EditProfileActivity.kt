@@ -1,11 +1,12 @@
 package com.apis.cerana.view
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.provider.MediaStore
@@ -13,6 +14,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.apis.cerana.R
 import com.apis.cerana.config.Loading
 import com.apis.cerana.controller.ImageGeneratorController
@@ -39,7 +41,7 @@ class EditProfileActivity : AppCompatActivity() {
   private lateinit var numberAddress: EditText
   private lateinit var profileImage: ImageView
   private lateinit var saveButton: Button
-  private var image: Uri? = null
+  private lateinit var image: Uri
   private var filePath: String = ""
   private var fileName: String = ""
 
@@ -68,7 +70,7 @@ class EditProfileActivity : AppCompatActivity() {
         values.put(MediaStore.Images.Media.TITLE, "image")
         values.put(MediaStore.Images.Media.DESCRIPTION, "image")
         values.put(MediaStore.Images.Media.SIZE, 5)
-        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)!!
         val callCameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         callCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, image)
         callCameraIntent.putExtra(MediaStore.Images.Media.SIZE, 5)
@@ -154,9 +156,10 @@ class EditProfileActivity : AppCompatActivity() {
     loading.closeDialog()
   }
 
-  private fun getRealPathFromImageURI(contentUri: Uri?): String {
+  @SuppressLint("Recycle")
+  private fun getRealPathFromImageURI(contentUri: Uri): String {
     val data: Array<String> = Array(100) { MediaStore.Images.Media.DATA }
-    val cursor = managedQuery(contentUri, data, null, null, null)
+    val cursor = this.contentResolver.query(contentUri, data, null, null, null)!!
     val columnIndex = cursor.getColumnIndex(MediaStore.Images.Media.DATA)
     cursor.moveToFirst()
     return cursor.getString(columnIndex)
@@ -184,18 +187,20 @@ class EditProfileActivity : AppCompatActivity() {
           filePath = getRealPathFromImageURI(image)
           val convertArray = filePath.split("/").toTypedArray()
           fileName = convertArray.last()
-          val thumbnails =
-            MediaStore.Images.Media.getBitmap(contentResolver, image)
-          val bitmap = Bitmap.createScaledBitmap(thumbnails, 150, 150, true)
+          val thumbnails = MediaStore.Images.Media.getBitmap(contentResolver, image)
+          val bitmap = Bitmap.createScaledBitmap(thumbnails, 500, 500, true)
+          val matrix = Matrix()
+          matrix.postRotate(90F)
+          val rotateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
           runOnUiThread {
             Handler().postDelayed({
-              profileImage.setImageBitmap(bitmap)
+              profileImage.setImageBitmap(rotateBitmap)
               loading.closeDialog()
             }, 100)
 
             response =
               UploadImageController(
-                getRealPathFromImageURI(getImageUri(bitmap)),
+                getRealPathFromImageURI(getImageUri(rotateBitmap)),
                 "image",
                 user.token
               ).execute().get()

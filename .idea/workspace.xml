@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c256c556-a19d-4559-9938-3286fd33757d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/RegisterActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_publish.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-in-rID/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,11 +19,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/controller/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/EditProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/EditProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/ImageActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/ImageActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/fragment/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/apis/cerana/view/fragment/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +43,7 @@
       <executable />
     </execution>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="R9CMA0F017J" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_XL_API_23" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -59,6 +63,7 @@
         <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -86,7 +91,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Android/Kotlin/FKPN-mobile/app/build/outputs/apk/debug/app-debug.apk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -94,10 +99,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -216,6 +221,16 @@
       <workItem from="1583127537371" duration="1292000" />
       <workItem from="1583128866663" duration="3000" />
       <workItem from="1583128907024" duration="749000" />
+      <workItem from="1583297734755" duration="84000" />
+      <workItem from="1583386624177" duration="2606000" />
+      <workItem from="1583391693876" duration="366000" />
+      <workItem from="1583405363666" duration="49000" />
+      <workItem from="1583475390703" duration="973000" />
+      <workItem from="1583478094985" duration="4939000" />
+      <workItem from="1583559835273" duration="1821000" />
+      <workItem from="1583571333305" duration="643000" />
+      <workItem from="1583572302552" duration="19000" />
+      <workItem from="1583573276499" duration="15000" />
     </task>
     <servers />
   </component>
@@ -245,14 +260,14 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="369" y="116" key="AndroidCreateResourceFileDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582882628261" />
-    <state x="538" y="178" key="AndroidCreateXmlResourceDialog" timestamp="1583124074188">
+    <state x="538" y="178" key="AndroidCreateXmlResourceDialog" timestamp="1583387588225">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="538" y="178" key="AndroidCreateXmlResourceDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583124074188" />
-    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1582952950906">
+    <state x="538" y="178" key="AndroidCreateXmlResourceDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583387588225" />
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1583572319116">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="460" y="119" key="FileChooserDialogImpl/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582952950906" />
+    <state x="460" y="119" key="FileChooserDialogImpl/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583572319116" />
     <state width="981" height="179" key="GridCell.Tab.0.bottom" timestamp="1583128832325">
       <screen x="1360" y="0" width="1024" height="728" />
     </state>
@@ -273,30 +288,30 @@
     </state>
     <state width="1317" height="179" key="GridCell.Tab.0.right/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583126258230" />
     <state width="981" height="179" key="GridCell.Tab.0.right/1360.0.1024.728/0.0.1360.728@1360.0.1024.728" timestamp="1583128832324" />
-    <state x="260" y="108" key="IDE.errors.dialog" timestamp="1583124291055">
+    <state x="260" y="108" key="IDE.errors.dialog" timestamp="1583476197843">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="260" y="108" key="IDE.errors.dialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583124291055" />
-    <state x="181" y="0" key="SettingsEditor" timestamp="1582785108164">
+    <state x="260" y="108" key="IDE.errors.dialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583476197843" />
+    <state x="181" y="0" key="SettingsEditor" timestamp="1583391915371">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="181" y="0" key="SettingsEditor/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582785108164" />
+    <state x="181" y="0" key="SettingsEditor/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583391915371" />
     <state x="92" y="92" width="1176" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1582619846623">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="92" y="92" width="1176" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582619846623" />
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1583127540747">
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1583572302505">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583127540747" />
+    <state x="376" y="189" key="com.intellij.ide.util.TipDialog/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583572302505" />
     <state x="376" y="96" width="737" height="606" key="find.popup" timestamp="1582869322492">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="376" y="96" width="737" height="606" key="find.popup/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582869322492" />
-    <state x="62" y="88" key="new project wizard" timestamp="1582862792833">
+    <state x="62" y="88" key="new project wizard" timestamp="1583572198337">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="62" y="88" key="new project wizard/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1582862792833" />
+    <state x="62" y="88" key="new project wizard/1360.0.1024.728/0.0.1360.728@0.0.1360.728" timestamp="1583572198337" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581410120993">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

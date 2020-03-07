@@ -90,8 +90,7 @@ class UserController {
           .addHeader("Authorization", "Bearer $token")
           .build()
         val response: Response = client.newCall(request).execute()
-        val input =
-          BufferedReader(InputStreamReader(response.body?.byteStream()))
+        val input = BufferedReader(InputStreamReader(response.body?.byteStream()))
 
         val inputData: String = input.readLine()
         val convertJSON = JSONObject(inputData)

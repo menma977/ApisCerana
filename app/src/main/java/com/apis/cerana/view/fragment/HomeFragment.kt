@@ -1,5 +1,6 @@
 package com.apis.cerana.view.fragment
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -32,6 +33,7 @@ class HomeFragment : Fragment() {
   private lateinit var addUser: ImageButton
   private lateinit var editProfile: ImageButton
   private lateinit var uploadKTP: ImageButton
+  private lateinit var share: ImageButton
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +51,7 @@ class HomeFragment : Fragment() {
     addUser = view.findViewById(R.id.addUserButton)
     editProfile = view.findViewById(R.id.editProfileButton)
     uploadKTP = view.findViewById(R.id.uploadKTPButton)
+    share = view.findViewById(R.id.shareButton)
 
     getBalance()
 
@@ -86,6 +89,10 @@ class HomeFragment : Fragment() {
       }
     }
 
+    share.setOnClickListener {
+      shareOnWhatApp()
+    }
+
     return view
   }
 
@@ -113,6 +120,18 @@ class HomeFragment : Fragment() {
           }
         }
       }
+    }
+  }
+
+  private fun shareOnWhatApp() {
+    val whatsAppIntent = Intent(Intent.ACTION_SEND)
+    whatsAppIntent.type = "text/plain"
+    whatsAppIntent.setPackage("com.whatsapp")
+    whatsAppIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.sher_on_what_app))
+    try {
+      activity!!.startActivity(whatsAppIntent)
+    } catch (ex: ActivityNotFoundException) {
+      Toast.makeText(this.context, "Whatsapp have not been installed.", Toast.LENGTH_LONG).show()
     }
   }
 }

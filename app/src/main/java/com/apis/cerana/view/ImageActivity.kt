@@ -1,9 +1,11 @@
 package com.apis.cerana.view
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,7 +29,7 @@ class ImageActivity : AppCompatActivity() {
   private lateinit var response: JSONObject
   private lateinit var imageKTP: ImageView
   private lateinit var imageSelfAndKTP: ImageView
-  private var image: Uri? = null
+  private lateinit var image: Uri
   private var nameBody: String = "identity_card_image"
   private var filePath: String = ""
   private var fileName: String = ""
@@ -48,7 +50,7 @@ class ImageActivity : AppCompatActivity() {
         values.put(MediaStore.Images.Media.TITLE, "image")
         values.put(MediaStore.Images.Media.DESCRIPTION, "image")
         values.put(MediaStore.Images.Media.SIZE, 5)
-        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)!!
         val callCameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         callCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, image)
         callCameraIntent.putExtra(MediaStore.Images.Media.SIZE, 5)
@@ -70,7 +72,7 @@ class ImageActivity : AppCompatActivity() {
         values.put(MediaStore.Images.Media.TITLE, "image")
         values.put(MediaStore.Images.Media.DESCRIPTION, "image")
         values.put(MediaStore.Images.Media.SIZE, 5)
-        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+        image = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)!!
         val callCameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         callCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, image)
         callCameraIntent.putExtra(MediaStore.Images.Media.SIZE, 5)
@@ -86,9 +88,10 @@ class ImageActivity : AppCompatActivity() {
     }
   }
 
-  private fun getRealPathFromImageURI(contentUri: Uri?): String {
+  @SuppressLint("Recycle")
+  private fun getRealPathFromImageURI(contentUri: Uri): String {
     val data: Array<String> = Array(100) { MediaStore.Images.Media.DATA }
-    val cursor = managedQuery(contentUri, data, null, null, null)
+    val cursor = this.contentResolver.query(contentUri, data, null, null, null)!!
     val columnIndex = cursor.getColumnIndex(MediaStore.Images.Media.DATA)
     cursor.moveToFirst()
     return cursor.getString(columnIndex)
@@ -116,22 +119,24 @@ class ImageActivity : AppCompatActivity() {
           filePath = getRealPathFromImageURI(image)
           val convertArray = filePath.split("/").toTypedArray()
           fileName = convertArray.last()
-          val thumbnails =
-            MediaStore.Images.Media.getBitmap(contentResolver, image)
-          val bitmap = Bitmap.createScaledBitmap(thumbnails, 150, 150, true)
+          val thumbnails = MediaStore.Images.Media.getBitmap(contentResolver, image)
+          val bitmap = Bitmap.createScaledBitmap(thumbnails, 500, 500, true)
+          val matrix = Matrix()
+          matrix.postRotate(90F)
+          val rotateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
           runOnUiThread {
             Handler().postDelayed({
               if (nameBody == "identity_card_image") {
-                imageKTP.setImageBitmap(bitmap)
+                imageKTP.setImageBitmap(rotateBitmap)
               } else {
-                imageSelfAndKTP.setImageBitmap(bitmap)
+                imageSelfAndKTP.setImageBitmap(rotateBitmap)
               }
               loading.closeDialog()
             }, 100)
 
             response =
               UploadImageController(
-                getRealPathFromImageURI(getImageUri(bitmap)),
+                getRealPathFromImageURI(getImageUri(rotateBitmap)),
                 nameBody,
                 user.token
               ).execute().get()
