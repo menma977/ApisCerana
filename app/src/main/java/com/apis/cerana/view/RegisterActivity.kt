@@ -74,7 +74,7 @@ class RegisterActivity : AppCompatActivity() {
         body["c_password"] = validationPassword.text.toString()
         body["bank"] = bank.text.toString()
         body["pin_bank"] = pinBank.text.toString()
-        body["ktp_number"] = ktpNumber.text.toString()
+        body["id_identity_card"] = ktpNumber.text.toString()
         body["phone"] = phone.text.toString()
         body["province"] = province.text.toString()
         body["district"] = district.text.toString()
@@ -112,7 +112,7 @@ class RegisterActivity : AppCompatActivity() {
             response["response"].toString() in "pin_bank" -> {
               massage = response["response"].toString().replace(response["response"].toString(), "Pin Bank")
             }
-            response["response"].toString() in "ktp_number" -> {
+            response["response"].toString() in "id_identity_card" -> {
               massage = response["response"].toString().replace(response["response"].toString(), "Nomor KTP")
             }
             response["response"].toString() in "phone" -> {

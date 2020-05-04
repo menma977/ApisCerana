@@ -105,7 +105,7 @@
         android:ems="10"
         android:hint="@string/bank"
         android:importantForAutofill="no"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/orange"/>
 
